@@ -1,0 +1,3 @@
+# 用netty+kryo+zookeeper实现rpc框架
+上一次写了一个简易的RPC框架，provider和consumer之间使用的是BIO通信，性能差，序列化采用了JSON虽然可读性好，但是效率也差了一些。
+所以这次改进使用NIO通信，采取Kyro进行双方序列化通信。服务注册中心改用zookeeper。
