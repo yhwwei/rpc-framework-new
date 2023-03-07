@@ -1,10 +1,7 @@
 package rpc.server;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.ChannelPipeline;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -27,16 +24,18 @@ import java.util.concurrent.TimeUnit;
  **/
 @Slf4j
 public class NettyRpcServer {
-    public static final int PORT = 9999;
-
+    public final int PORT = 9999;
+    public final String ip = "127.0.0.1";
     //在开始之前，要自己先写 将服务注册一下
-    private final ServiceProvider serviceProvider = new ZkServiceProviderImpl(InetAddress.getLocalHost().getHostAddress(), PORT);
+    private final ServiceProvider serviceProvider;
 
-    public NettyRpcServer() throws UnknownHostException {
+    public NettyRpcServer(ServiceProvider serviceProvider){
+        this.serviceProvider = serviceProvider;
+
     }
-
-    public void start(){
+    public void start() throws UnknownHostException {
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try{
             ServerBootstrap b = new ServerBootstrap();
@@ -61,6 +60,10 @@ public class NettyRpcServer {
                             p.addLast(new NettyRpcServerHandler(serviceProvider));
                         }
                     });
+            // 绑定端口，同步等待绑定成功
+            ChannelFuture f = b.bind(PORT).sync();
+            // 等待服务端监听端口关闭
+            f.channel().closeFuture().sync();
         }catch (Exception e){
             log.error("occur exception when start server:", e);
         }finally {

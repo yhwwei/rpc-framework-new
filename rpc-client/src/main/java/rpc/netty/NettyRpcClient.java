@@ -61,7 +61,6 @@ public class NettyRpcClient {
     @SneakyThrows
     public Channel doConnect(InetSocketAddress inetSocketAddress) {
         CompletableFuture<Channel> completableFuture = new CompletableFuture<>();
-
         //异步监听
         bootstrap.connect(inetSocketAddress).addListener((ChannelFutureListener) future -> {
             if (future.isSuccess()) {
@@ -76,12 +75,12 @@ public class NettyRpcClient {
     public Object sendRpcRequest(RpcRequest rpcRequest) {
         // build return value
         CompletableFuture<RpcResponse<Object>> resultFuture = new CompletableFuture<>();
-        // get server address
+        //获取服务地址
         String ipPort = rpcRequestTransport.sendRpcRequest(rpcRequest);
 
         //字符串的 ip:port
         InetSocketAddress inetSocketAddress = new InetSocketAddress(ipPort.split(":")[0], Integer.parseInt(ipPort.split(":")[1]));
-        // get  server address related channel
+        // 获取连接的channel
         Channel channel = getChannel(inetSocketAddress);
         if (channel.isActive()) {
             // 发送消息后，先放入未处理队列中
@@ -108,7 +107,7 @@ public class NettyRpcClient {
 
         return resultFuture;
     }
-
+    //sendMsg ---》 getChannel----》doConnect
     //获取跟其他服务器连接的channel
     public Channel getChannel(InetSocketAddress inetSocketAddress) {
         Channel channel = channelProvider.get(inetSocketAddress);

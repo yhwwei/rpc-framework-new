@@ -41,3 +41,8 @@ netty包下面的ChannelProvider 维护跟服务器连接的channel
 RpcRequest和RpcResponse要先采用Kryo序列化为二进制数组
 Kryo是线程不安全的，要用ThreadLocal
 在rpc-protocolmodule 里面定义MessageProtocolDecoder解码、MessageProtocolEncoder编码器，在使用时要在pipeline里面添加
+
+# 测试
+在rpc-simple
+启动zookeeper
+然后启动ServerMain，ClientMain，看控制台输出打印成功

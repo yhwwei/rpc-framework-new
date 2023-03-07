@@ -5,92 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26182711-1994-4d91-8a4c-76c3e02f51d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/transport/NettyRpcRequestTransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/transport/RpcRequestTransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/proxy/RpcClientProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/src/main/resources/rpc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/target/classes/rpc/transport/RpcRequestTransport.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-client/target/classes/rpc/transport/netty/NettyRpcRequestTransport.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/enums/RpcConfigEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/enums/RpcErrorMessageEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/enums/RpcResponseCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/exception/RpcException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/exception/SerializeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/factory/SingletonFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/utils/CollectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/utils/HashUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/utils/PropertiesFileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/rpc/utils/ReflectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/enums/RpcConfigEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/enums/RpcErrorMessageEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/enums/RpcResponseCodeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/exception/RpcException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/exception/SerializeException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/factory/SingletonFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/utils/CollectionUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/utils/HashUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/utils/PropertiesFileUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/rpc/utils/ReflectionUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/codec/MessageProtocolDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/codec/MessageProtocolEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/codec/Serializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/codec/kyro/KryoSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/protocol/MessageProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/protocol/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/rpc/protocol/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/codec/MessageProtocolDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/codec/MessageProtocolEncoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/codec/Serializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/codec/kyro/KryoSerializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/protocol/MessageProtocol.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/protocol/RpcRequest$RpcRequestBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/protocol/RpcRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/protocol/RpcResponse$RpcResponseBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/rpc/protocol/RpcResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/LoadBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/PollingBalance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/ServiceDiscovery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/ServiceRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/ZkServiceDiscoveryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/ZkServiceRegistryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/utils/CuratorUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/ConsistentHashingWithVirtualNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/LoadBalance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/PollingBalance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/ServiceDiscovery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/ServiceRegistry.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/ZkServiceDiscoveryImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/ZkServiceRegistryImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/utils/CuratorUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/provider/ServiceProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/provider/impl/ZkServiceProviderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/NettyRpcServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/NettyRpcServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/RpcRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/rpc/server/CurotorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/rpc/server/RpcRequestHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/rpc/service/Hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/rpc/service/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/provider/ServiceProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/provider/impl/ZkServiceProviderImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServerHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/RpcRequestHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/test-classes/rpc/server/CurotorTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/test-classes/rpc/server/RpcRequestHandlerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/test-classes/rpc/service/Hello.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/target/test-classes/rpc/service/HelloService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-simple/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/loadbalance/ConsistentHashingWithVirtualNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/ConsistentHashingWithVirtualNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/loadbalance/PollingBalance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpc/transport/RpcRequestTransport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpc/transport/netty/NettyRpcRequestTransport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/ConsistentHashingWithVirtualNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/ConsistentHashingWithVirtualNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/ZkServiceDiscoveryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/ZkServiceDiscoveryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/utils/CuratorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/utils/CuratorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/ConsistentHashingWithVirtualNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/ConsistentHashingWithVirtualNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/ZkServiceDiscoveryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/ZkServiceDiscoveryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/utils/CuratorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/utils/CuratorUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/NettyRpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/NettyRpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServerHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/RpcRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/RpcRequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-simple/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-simple/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,24 +50,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/code/rpc-framework-new/rpc-server/src/main/java/rpc&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/code/rpc-framework-new/rpc-simple/src/main/java/rpc/test",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\rpc-framework-new\rpc-simple\src\main\java\rpc\test" />
       <recent name="D:\code\rpc-framework-new\rpc-server\src\main\java\rpc" />
       <recent name="D:\code\rpc-framework-new\rpc-registry\src\main\java\rpc" />
     </key>
@@ -156,13 +86,13 @@
       <recent name="rpc.factory" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RpcRequestHandlerTest">
-    <configuration name="ConsistentHashingWithVirtualNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="rpc.loadbalance.ConsistentHashingWithVirtualNode" />
-      <module name="rpc-client" />
+  <component name="RunManager" selected="Application.ClientMain">
+    <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rpc.test.client.ClientMain" />
+      <module name="rpc-simple" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rpc.loadbalance.*" />
+          <option name="PATTERN" value="rpc.test.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -196,6 +126,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rpc.test.server.ServerMain" />
+      <module name="rpc-simple" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rpc.test.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="rpc.codec.kyro.KryoSerializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rpc.codec.kyro.KryoSerializer" />
       <module name="rpc-protocol" />
@@ -209,26 +152,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rpc.netty.transport.NettyRpcRequestTransport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="rpc.netty.transport.NettyRpcRequestTransport" />
-      <module name="rpc-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rpc.netty.transport.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClientMain" />
+        <item itemvalue="Application.ServerMain" />
         <item itemvalue="Application.RpcRequestHandlerTest" />
         <item itemvalue="Application.CurotorTest" />
         <item itemvalue="Application.rpc.codec.kyro.KryoSerializer" />
-        <item itemvalue="Application.rpc.netty.transport.NettyRpcRequestTransport" />
-        <item itemvalue="Application.ConsistentHashingWithVirtualNode" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +172,7 @@
       <updated>1678064322716</updated>
       <workItem from="1678064325579" duration="42429000" />
       <workItem from="1678116934493" duration="1260000" />
-      <workItem from="1678153144681" duration="9024000" />
+      <workItem from="1678153144681" duration="14391000" />
     </task>
     <servers />
   </component>

@@ -53,6 +53,7 @@ public class ConsistentHashingWithVirtualNode implements LoadBalance{
         // 只取出所有大于该hash值的部分而不必遍历整个Tree
 
         SortedMap<Integer, String> subMap = virtualNodes.tailMap(hash);
+        System.out.println(subMap);
         String virtualNodeName;
         if (subMap == null || subMap.isEmpty()) {
             // hash值在最尾部，应该映射到第一个group上

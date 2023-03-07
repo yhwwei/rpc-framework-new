@@ -152,7 +152,7 @@ public final class CuratorUtils {
             result = zkClient.getChildren().forPath(servicePath);
             //放入本地缓存
             SERVICE_ADDRESS_MAP.put(rpcServiceName, result);
-
+            nodes = ConsistentHashingWithVirtualNode.generateNodes(result);
             //第一次从zookeeper获取到信息，同时开启监听，发生变化就进行更新
             registerWatcher(rpcServiceName, zkClient);
         } catch (Exception e) {
