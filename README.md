@@ -31,6 +31,9 @@ registry.zk.utils  包下面的CuratorUtils帮助我们连接zookeeper，实现�
 provider包 会调用rpc-registry的服务注册，一方面将服务注册到服务中心，一方面本地要维护一个自己对这个服务的单例实例对象
 RpcRequestHandler类专门对rpcRequest处理，生成rpcResponse
 NettyRpcServerHandler 心跳机制、将请求交给RpcRequestHandler处理
+# 可优化部分
+代码中有些硬编码，后续可以进行优化
+采取注解的方式替代配置文件
 ③rpc-client
 proxy包 采用JDK自带的动态代理  内部invoke进行远程调用
 netty包下面的ChannelProvider 维护跟服务器连接的channel
