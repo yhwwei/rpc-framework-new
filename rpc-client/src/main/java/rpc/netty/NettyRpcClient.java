@@ -31,11 +31,16 @@ import java.util.concurrent.TimeUnit;
  **/
 @Slf4j
 public class NettyRpcClient {
+    //存储未处理的请求
     private final UnprocessedRequests unprocessedRequests;
+    //存储自己跟服务器的channel连接
     private final ChannelProvider channelProvider;
     private final Bootstrap bootstrap;
+
+    //网络传输
     private final RpcRequestTransport rpcRequestTransport;
     private final EventLoopGroup eventLoopGroup;
+    //kyro序列化
     private KryoSerializer kryoSerializer = new KryoSerializer();
     public NettyRpcClient(RpcRequestTransport rpcRequestTransport){
         this.channelProvider = new ChannelProvider();
@@ -61,7 +66,6 @@ public class NettyRpcClient {
     @SneakyThrows
     public Channel doConnect(InetSocketAddress inetSocketAddress) {
         CompletableFuture<Channel> completableFuture = new CompletableFuture<>();
-
         //异步监听
         bootstrap.connect(inetSocketAddress).addListener((ChannelFutureListener) future -> {
             if (future.isSuccess()) {
@@ -73,15 +77,21 @@ public class NettyRpcClient {
         });
         return completableFuture.get();
     }
+
+    /**
+     * 发送请求，然后得到CompletableFuture存储响应
+     * @param rpcRequest  请求
+     * @return  CompletableFuture
+     */
     public Object sendRpcRequest(RpcRequest rpcRequest) {
         // build return value
         CompletableFuture<RpcResponse<Object>> resultFuture = new CompletableFuture<>();
-        // get server address
+        //获取服务地址，内部有负载均衡
         String ipPort = rpcRequestTransport.sendRpcRequest(rpcRequest);
 
         //字符串的 ip:port
         InetSocketAddress inetSocketAddress = new InetSocketAddress(ipPort.split(":")[0], Integer.parseInt(ipPort.split(":")[1]));
-        // get  server address related channel
+        // 获取连接的channel
         Channel channel = getChannel(inetSocketAddress);
         if (channel.isActive()) {
             // 发送消息后，先放入未处理队列中
@@ -108,7 +118,7 @@ public class NettyRpcClient {
 
         return resultFuture;
     }
-
+    //sendMsg ---》 getChannel----》doConnect
     //获取跟其他服务器连接的channel
     public Channel getChannel(InetSocketAddress inetSocketAddress) {
         Channel channel = channelProvider.get(inetSocketAddress);

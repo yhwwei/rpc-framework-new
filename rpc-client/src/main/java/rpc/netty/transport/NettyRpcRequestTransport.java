@@ -12,7 +12,10 @@ import java.net.UnknownHostException;
  * @version 1.0
  **/
 public class NettyRpcRequestTransport implements RpcRequestTransport {
+    //负载均衡器
     private LoadBalance loadBalance;
+
+    //服务发现
     private ServiceDiscovery serviceDiscovery;
 
     /**

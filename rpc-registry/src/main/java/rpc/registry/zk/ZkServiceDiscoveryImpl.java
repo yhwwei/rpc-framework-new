@@ -28,7 +28,9 @@ public class ZkServiceDiscoveryImpl implements ServiceDiscovery {
             throw new RpcException(RpcErrorMessageEnum.SERVICE_CAN_NOT_BE_FOUND, rpcServiceName);
         }
         //通过负载均衡后返回服务提供者的ip+port
-        return loadBalance.getServerBalance(selfIp,serviceUrlList);
+        String ipPort = loadBalance.getServerBalance(selfIp, serviceUrlList);
+        System.out.println(ipPort);
+        return ipPort;
     }
 
 }
