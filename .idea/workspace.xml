@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="26182711-1994-4d91-8a4c-76c3e02f51d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpc/transport/RpcRequestTransport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/rpc/transport/netty/NettyRpcRequestTransport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/ConsistentHashingWithVirtualNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/loadbalance/ConsistentHashingWithVirtualNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/ZkServiceDiscoveryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/ZkServiceDiscoveryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/utils/CuratorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/src/main/java/rpc/registry/zk/utils/CuratorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/ConsistentHashingWithVirtualNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/loadbalance/ConsistentHashingWithVirtualNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/ZkServiceDiscoveryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/ZkServiceDiscoveryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/utils/CuratorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-registry/target/classes/rpc/registry/zk/utils/CuratorUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/NettyRpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/rpc/server/NettyRpcServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/NettyRpcServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/RpcRequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/rpc/server/RpcRequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-simple/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-simple/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/NettyRpcClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/UnprocessedRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/UnprocessedRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/transport/NettyRpcRequestTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/rpc/netty/transport/NettyRpcRequestTransport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +47,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/code/rpc-framework-new/rpc-simple/src/main/java/rpc/test",
+    "last_opened_file_path": "D:/code/聚合平台/generated-search-frontend",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
@@ -172,7 +161,9 @@
       <updated>1678064322716</updated>
       <workItem from="1678064325579" duration="42429000" />
       <workItem from="1678116934493" duration="1260000" />
-      <workItem from="1678153144681" duration="14391000" />
+      <workItem from="1678153144681" duration="14584000" />
+      <workItem from="1678169024376" duration="1274000" />
+      <workItem from="1678189571987" duration="587000" />
     </task>
     <servers />
   </component>

@@ -31,11 +31,16 @@ import java.util.concurrent.TimeUnit;
  **/
 @Slf4j
 public class NettyRpcClient {
+    //存储未处理的请求
     private final UnprocessedRequests unprocessedRequests;
+    //存储自己跟服务器的channel连接
     private final ChannelProvider channelProvider;
     private final Bootstrap bootstrap;
+
+    //网络传输
     private final RpcRequestTransport rpcRequestTransport;
     private final EventLoopGroup eventLoopGroup;
+    //kyro序列化
     private KryoSerializer kryoSerializer = new KryoSerializer();
     public NettyRpcClient(RpcRequestTransport rpcRequestTransport){
         this.channelProvider = new ChannelProvider();
@@ -72,10 +77,16 @@ public class NettyRpcClient {
         });
         return completableFuture.get();
     }
+
+    /**
+     * 发送请求，然后得到CompletableFuture存储响应
+     * @param rpcRequest  请求
+     * @return  CompletableFuture
+     */
     public Object sendRpcRequest(RpcRequest rpcRequest) {
         // build return value
         CompletableFuture<RpcResponse<Object>> resultFuture = new CompletableFuture<>();
-        //获取服务地址
+        //获取服务地址，内部有负载均衡
         String ipPort = rpcRequestTransport.sendRpcRequest(rpcRequest);
 
         //字符串的 ip:port

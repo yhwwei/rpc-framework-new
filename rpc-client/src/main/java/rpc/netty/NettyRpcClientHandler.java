@@ -36,7 +36,8 @@ public class NettyRpcClientHandler extends ChannelInboundHandlerAdapter{
                 byte[] content = tmp.getContent();
                 RpcResponse rpcResponse = kryoSerializer.deserialize(content, RpcResponse.class);
 
-                //收到回复后，在未完成的队列中删除掉该request
+                //收到回复后，往未完成的队列的请求ID对应的CompletableFuture写入数据，同时在未完成的队列中删除掉该request
+
                 unprocessedRequests.complete(rpcResponse);
             }
         } finally {
